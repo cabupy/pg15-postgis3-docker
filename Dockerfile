@@ -1,5 +1,7 @@
 FROM postgres:15
 
+LABEL org.opencontainers.image.source=https://github.com/cabupy/pg15-postgis3-docker
+
 RUN apt-get update \
     && apt-get install wget -y \
     && apt-get install postgresql-15-postgis-3 -y \
