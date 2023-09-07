@@ -1,0 +1,15 @@
+---
+version: '3.8'
+services:
+  postgres_db:
+    image: 'cabupy/pg15-postgis3:latest'
+    ports:
+      - '127.0.0.1:5435:5432'
+    environment:
+      POSTGRES_PASSWORD: postgres
+      TZ: America/Asuncion
+      PGTZ: America/Asuncion
+    volumes:
+      - postgres-data-volume:/var/lib/postgresql/data
+volumes:
+  postgres-data-volume:
